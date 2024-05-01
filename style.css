@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 8rem 0;
+  background-color: hsl(30, 54%, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* --------------------------------------------- */
+
+  & h1,
+  & .h2-title {
+    font-family: "Young Serif", serif;
+  }
+
+  & .h2-title {
+    color: hsl(14, 45%, 36%);
+    font-weight: 400;
+    font-size: 2.2rem;
+  }
+
+  & b {
+    color: hsl(24, 5%, 18%);
+  }
+
+  /* --------------------------------------------- */
+
+  & .container {
+    width: 55%;
+    background-color: #fff;
+    padding: 3rem;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.2rem;
+
+    /* --------------------------------------------- */
+
+    & .image {
+      width: 100%;
+
+      & img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    /* --------------------------------------------- */
+
+    & .introduction {
+
+      & h1 {
+        font-size: 3.2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+
+      & p {
+        line-height: 1.8rem;
+        margin-bottom: 3rem;
+      }
+
+      & .preparation-time {
+        background-color: #FFF7FC;
+        padding: 2rem;
+
+        & h2 {
+          color: hsl(332, 51%, 32%);
+          font-size: 1.6rem;
+        }
+
+        & ul {
+          padding: 1rem 2rem;
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+
+          & li {
+            padding-left: 1.3rem;
+
+            &::marker {
+              color: hsl(332, 51%, 32%);
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    /* --------------------------------------------- */
+
+    & .ingredients {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid hsl(30, 18%, 87%);
+
+      & ul {
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        & li {
+          padding-left: 1.3rem;
+
+          &::marker {
+            color: hsl(332, 51%, 32%);
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    /* --------------------------------------------- */
+
+    & .instructions {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid hsl(30, 18%, 87%);
+
+      & ol {
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        & li {
+          padding-left: 1.5rem;
+          line-height: 1.8rem;
+
+          &::marker {
+            color: hsl(332, 51%, 32%);
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+        }
+
+
+      }
+    }
+
+    /* --------------------------------------------- */
+
+    & .nutrition {
+
+      & p {
+        margin: 1.8rem 0 1rem 0;
+      }
+
+      & table {
+        width: 100%;
+
+        & tr {
+          padding: 1rem 0;
+          display: flex;
+
+          &:not(:last-of-type) {
+            border-bottom: 1px solid hsl(30, 18%, 87%);
+          }
+
+          & td {
+            width: 50%;
+
+            &:not(:nth-of-type(2n)) {
+              padding-left: 2rem;
+            }
+
+            & b {
+              color: hsl(14, 45%, 36%);
+            }
+          }
+        }
+
+
+      }
+    }
+
+    /* --------------------------------------------- */
+  }
+}
+
+
+
+@media (max-width: 1025px) {
+  & .container {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 82% !important;
+  }
+}
+
+@media (max-width: 426px) {
+  body {
+    padding: 4rem 0;
+
+    .container {
+      border-radius: 0;
+
+      & .image {
+        width: fit-content;
+        margin: -3rem -3rem 0 -3rem;
+
+        & img {
+          border-radius: 0;
+        }
+      }
+
+      & h1 {
+        font-size: 2.8rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 321px) {
+
+  .container {
+    & .introduction {
+      & h1 {
+        font-size: 2.2rem !important;
+      }
+
+      & .preparation-time {
+        & li {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+}
